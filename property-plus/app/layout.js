@@ -3,6 +3,7 @@
 import React from 'react';
 import '@/assets/styles/globals.css';
 import Navbar from '@/components/Navbar';  // Ensure the case matches the file name
+import Footer from '@/components/Footer';
 
 export const metadata = {
     title: 'PropertyPulse | Find The Perfect Rental', // Fixed typo in the title
@@ -21,6 +22,7 @@ const MainLayout = ({ children }) => {
       <body>
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
