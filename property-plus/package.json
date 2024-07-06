@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "mangoodb": "^1.5.1",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.4.4",
+    "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "react-spinners": "^0.14.1"
   },
   "devDependencies": {
     "postcss": "^8",
