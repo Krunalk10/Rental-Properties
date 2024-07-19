@@ -1,5 +1,5 @@
 import React from 'react'
-import properties from '@/properties.json'
+// import properties from '@/properties.json'
 import Image from 'next/image';
 import Link from 'next/link';
 import {FaBed, FaBath, FaMapMarker, FaRulerCombined, FaMoneyBill} from 'react-icons/fa'
@@ -7,7 +7,7 @@ import {FaBed, FaBath, FaMapMarker, FaRulerCombined, FaMoneyBill} from 'react-ic
 const PropertyCard = ({property}) => {
     const getRateDisplay = () => {
         const {rates} = property;
-
+        console.log("propertyCart", property)
         if(rates.monthly) {
             return (`${rates.monthly.toLocaleString()}/mo`)
         }else if (rates.weekly) {
@@ -21,7 +21,7 @@ const PropertyCard = ({property}) => {
   return (
     <div className="rounded-xl shadow-md relative">
     <Image
-      src={`/images/properties/${property.images[0]}`}
+      src={property.images[0]}
       alt=""
       width={0}
       height={0}
@@ -78,7 +78,7 @@ const PropertyCard = ({property}) => {
           <span className="text-orange-700"> {property.location.city} {property.location.state} </span>
         </div>
         <Link
-          href={`/properties/${properties._id}`}
+          href={`/properties/${property._id}`}
           className="h-[36px] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-center text-sm"
         >
           Details
