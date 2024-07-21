@@ -1,11 +1,11 @@
 import connectDB from '@/config/database';
-import Message from '@/Models/Messages';
+import Message  from '@/Models/Messages';
 import { getSessionUser } from '@/utils/getSessionUser';
 
 export const dynamic = 'force-dynamic';
 
 // PUT /api/messages/:id
-export const PUT = async (request, { params }) => {
+export const PUT = async (request, { params }) => { 
   try {
     await connectDB();
 
@@ -41,6 +41,7 @@ export const PUT = async (request, { params }) => {
     return new Response('Something went wrong', { status: 500 });
   }
 };
+
 
 // DELETE /api/messages/:id
 export const DELETE = async (request, { params }) => {
