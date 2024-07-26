@@ -2,14 +2,16 @@ import React from 'react'
 import Hero from '@/components/Hero'
 import InfoBoxes from '@/components/InfoBoxes'
 import HomePageProperties from '@/components/HomePageProperties'
+import FeaturedProperties from '@/components/FeaturedProperties'
 
 const HomePage = () => {
   return (
-      <>
-        <Hero />
-        <InfoBoxes />
-        <HomePageProperties />
-      </>
+    <>
+      <Hero />
+      <InfoBoxes />
+      <FeaturedProperties />
+      <HomePageProperties />
+    </>
   )
 }
 
